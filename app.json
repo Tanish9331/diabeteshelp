@@ -35,6 +35,15 @@
         }
       ]
     ],
+    "extra": {
+      "EXPO_PUBLIC_FIREBASE_API_KEY": "AIzaSyDtOefhPLwv_-_oZJ_ka-uLOo6j4IyWijw",
+      "EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN": "diabeteshelp-5e309.firebaseapp.com",
+      "EXPO_PUBLIC_FIREBASE_PROJECT_ID": "diabeteshelp-5e309",
+      "EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET": "diabeteshelp-5e309.firebasestorage.app",
+      "EXPO_PUBLIC_FIREBASE_SENDER_ID": "137415480309",
+      "EXPO_PUBLIC_FIREBASE_APP_ID": "1:137415480309:android:a262882aa3d7d23ead86bc",
+      "EXPO_PUBLIC_GOOGLE_OAUTH_CLIENT_ID": "137415480309-3hfo99ta36gra1t7eruk14cdkejsbhhi.apps.googleusercontent.com"
+    },
     "experiments": {
       "typedRoutes": true
     }

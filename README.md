@@ -14,6 +14,22 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 
    ```bash
    npx expo start
+## Environment configuration
+
+You can set credentials via either app.json extra or a local .env file. A template is provided:
+
+1) app.json (pre-populated with empty values)
+- EXPO_PUBLIC_FIREBASE_API_KEY
+- EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN
+- EXPO_PUBLIC_FIREBASE_PROJECT_ID
+- EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET
+- EXPO_PUBLIC_FIREBASE_SENDER_ID
+- EXPO_PUBLIC_FIREBASE_APP_ID
+- EXPO_PUBLIC_GOOGLE_OAUTH_CLIENT_ID
+
+2) .env (optional)
+- Copy `.env.example` to `.env` and fill values (Expo reads EXPO_PUBLIC_* at build/runtime)
+
    ```
 
 In the output, you'll find options to open the app in a
