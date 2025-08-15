@@ -1,61 +1,48 @@
-import { Brand } from '@/constants/Colors';
-import { MD3LightTheme as PaperLight, configureFonts, type MD3Theme } from 'react-native-paper';
+import { MD3LightTheme } from 'react-native-paper';
 
-const baseFonts = {
-  // If Roboto/Inter are present on the device they'll be used; otherwise fall back to system
-  fontFamily: 'Inter, Roboto, System',
-};
-
-const fonts = configureFonts({
-  config: {
-    displayLarge: baseFonts,
-    displayMedium: baseFonts,
-    displaySmall: baseFonts,
-    headlineLarge: baseFonts,
-    headlineMedium: baseFonts,
-    headlineSmall: baseFonts,
-    titleLarge: baseFonts,
-    titleMedium: baseFonts,
-    titleSmall: baseFonts,
-    labelLarge: baseFonts,
-    labelMedium: baseFonts,
-    labelSmall: baseFonts,
-    bodyLarge: baseFonts,
-    bodyMedium: baseFonts,
-    bodySmall: baseFonts,
+export const paperLightTheme = {
+  ...MD3LightTheme,
+  colors: {
+    ...MD3LightTheme.colors,
+    primary: '#2D6A9D', // Primary blue
+    secondary: '#5CB85C', // Secondary green
+    tertiary: '#E8F4FD', // Light blue
+    error: '#E74C3C', // Error red
+    warning: '#F39C12', // Warning orange
+    success: '#4A9A4A', // Dark green
+    surface: '#ffffff',
+    background: '#F5FAFF',
+    onPrimary: '#ffffff',
+    onSecondary: '#ffffff',
+    onSurface: '#2D6A9D',
+    onBackground: '#2D6A9D',
+    outline: '#E8F4FD',
   },
-});
-
-export const brandColors = {
-  primary: Brand.primary,
-  secondary: Brand.secondary,
-  error: Brand.error,
-  warning: Brand.warning,
-  neutral: Brand.neutral,
-  lightBlue: Brand.lightBlue,
-};
-
-export function createPaperTheme(): MD3Theme {
-  const base = PaperLight;
-  return {
-    ...base,
-    colors: {
-      ...base.colors,
-      primary: Brand.primary,
-      secondary: Brand.secondary,
-      error: Brand.error,
-      surface: '#ffffff',
-      surfaceVariant: Brand.lightBlue,
-      background: '#F5FAFF',
-      outline: Brand.neutral,
-      onSurfaceVariant: '#344054',
+  fonts: {
+    ...MD3LightTheme.fonts,
+    labelLarge: {
+      ...MD3LightTheme.fonts.labelLarge,
+      fontFamily: 'Inter_600SemiBold',
     },
-    fonts,
-    roundness: 10,
-  };
-}
-
-export const paperLightTheme = createPaperTheme();
-export const paperDarkTheme = paperLightTheme; // dark theme disabled; use light theme everywhere
-
-
+    labelMedium: {
+      ...MD3LightTheme.fonts.labelMedium,
+      fontFamily: 'Inter_500Medium',
+    },
+    bodyLarge: {
+      ...MD3LightTheme.fonts.bodyLarge,
+      fontFamily: 'Inter_400Regular',
+    },
+    bodyMedium: {
+      ...MD3LightTheme.fonts.bodyMedium,
+      fontFamily: 'Inter_400Regular',
+    },
+    titleLarge: {
+      ...MD3LightTheme.fonts.titleLarge,
+      fontFamily: 'Inter_700Bold',
+    },
+    titleMedium: {
+      ...MD3LightTheme.fonts.titleMedium,
+      fontFamily: 'Inter_600SemiBold',
+    },
+  },
+};
